@@ -22,7 +22,8 @@ album_repository.save(album_1)
 album_2 = Album("Millenium", artist_2, "pop")
 album_repository.save(album_2)
 
-
+artist_1.name = "The Spice Girls"
+artist_repository.update(artist_1)
 
 
 

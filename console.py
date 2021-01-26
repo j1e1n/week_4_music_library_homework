@@ -6,6 +6,8 @@ import repositories.artist_repository as artist_repository
 import repositories.album_repository as album_repository
 
 
+
+album_repository.delete_all()
 artist_repository.delete_all()
 
 artist_1 = Artist("Spice Girls")
@@ -26,10 +28,13 @@ album_repository.save(album_2)
 
 
 
-
 res = artist_repository.select_all()
 for artist in res:
     print(artist.__dict__)
+
+res_alb = album_repository.select_all()
+for album in res_alb:
+    print(album.__dict__)
 
 
 pdb.set_trace()

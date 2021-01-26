@@ -5,7 +5,13 @@ from models.album import Album
 
 
 def save(artist):
-    pass
+    sql = f"INSERT INTO artists (name) VALUES (%s) RETURNING *"
+    values = [artist.name]
+    results = run_sql(sql, values)
+    print(results)
+    id = results[0]['id']
+    artist.id = id
+    return artist
 
 
 def delete_all():

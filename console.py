@@ -14,6 +14,18 @@ artist_repository.save(artist_1)
 artist_2 = Artist("Backstreet Boys")
 artist_repository.save(artist_2)
 
+album_1 = Album("Spice", artist_1, "pop")
+album_repository.save(album_1)
+
+album_2 = Album("Millenium", artist_2, "pop")
+album_repository.save(album_2)
+
+
+
+
+
+
+
 
 res = artist_repository.select_all()
 for artist in res:
